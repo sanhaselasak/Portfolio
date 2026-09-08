@@ -1,0 +1,217 @@
+/* ==========================================================================
+   SANHA SELASAK PORTFOLIO — RESPONSIVE DESIGN SYSTEM (responsive.css)
+   Breakpoints, fluid typography, touch optimization, no-horizontal-scroll.
+   ========================================================================== */
+
+/* --- 1. Large Desktop (1440px and above) --- */
+@media (min-width: 1440px) {
+  :root {
+    --container-max: 1240px;
+  }
+}
+
+/* --- 2. Standard Desktop / Small Laptop (max-width: 1199px) --- */
+@media (max-width: 1199px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-holder {
+    max-width: 380px;
+  }
+}
+
+/* --- 3. Tablet Landscape & Portrait (max-width: 991px) --- */
+@media (max-width: 991px) {
+  .section {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .nav-menu,
+  .header-actions .btn-solid {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .hero-content {
+    max-width: none;
+  }
+
+  .profile-holder {
+    max-width: 340px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .about-columns {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .featured-info-card {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+}
+
+/* --- 4. Mobile Landscape & Large Phones (max-width: 767px) --- */
+@media (max-width: 767px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .profile-image svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .hero-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .profile-holder {
+    max-width: 280px;
+  }
+
+  .profile-holder-frame svg {
+    width: 64px;
+    height: 64px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-info-card {
+    grid-column: 1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .project-meta-table {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .modal-card {
+    padding: 1.25rem;
+    margin: 0.75rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
+
+/* --- 5. Small Mobile (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .brand-title {
+    display: none;
+  }
+
+  .btn {
+    padding: 0.65rem 1.15rem;
+    font-size: 0.86rem;
+  }
+
+  .btn-sm {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.76rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .page-banner {
+    padding: 2.5rem 0;
+  }
+}
+
+/* --- Safe Area for Notch devices --- */
+@supports (padding: env(safe-area-inset-top)) {
+  .site-header {
+    padding-top: env(safe-area-inset-top);
+    height: calc(var(--header-height) + env(safe-area-inset-top));
+  }
+
+  .mobile-nav-drawer {
+    top: calc(var(--header-height) + env(safe-area-inset-top));
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+  }
+}

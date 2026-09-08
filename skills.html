@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical & MIS Skills — Sanha Selasak</title>
+  <meta name="description" content="Technical proficiencies, developer workflows, database architecture, and business information systems capabilities." />
+
+  <!-- Google Fonts -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="256x256" href="./assets/favicon-256.png" />
+  <link rel="apple-touch-icon" href="./assets/favicon-256.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+
+  <script type="module" src="./js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="./" class="brand-link">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary);">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name" data-bind="name">Sanha Selasak</span>
+          <span class="brand-title">MIS • Software Engineering</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="./" class="nav-link">Home</a></li>
+          <li><a href="./about.html" class="nav-link">About</a></li>
+          <li><a href="./skills.html" class="nav-link active">Skills</a></li>
+          <li><a href="./projects.html" class="nav-link">Projects</a></li>
+          <li><a href="./experience.html" class="nav-link">Experience</a></li>
+          <li><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle light or dark theme" title="Toggle Theme">
+          <span class="theme-toggle-icon"></span>
+        </button>
+        <a href="./contact.html" class="btn btn-solid btn-sm">Get in Touch</a>
+        <button class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <a href="./" class="mobile-nav-link">Home</a>
+    <a href="./about.html" class="mobile-nav-link">About</a>
+    <a href="./skills.html" class="mobile-nav-link active">Skills</a>
+    <a href="./projects.html" class="mobile-nav-link">Projects</a>
+    <a href="./experience.html" class="mobile-nav-link">Experience</a>
+    <a href="./contact.html" class="mobile-nav-link">Contact</a>
+    <div style="margin-top: 1rem;">
+      <a href="./contact.html" class="btn btn-solid" style="width: 100%;">Get in Touch</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Banner -->
+    <div class="page-banner bg-atmosphere">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="./">Home</a> / Skills
+        </div>
+        <h1>Technical & MIS Skills</h1>
+        <p>
+          Technical proficiencies, developer workflows, database architecture, and business information systems capabilities.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skills Main Section -->
+    <section class="section">
+      <div class="container">
+        <!-- Search and Count Bar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border-soft);">
+          <div>
+            <span id="skills-count-label" style="font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; color: var(--color-text-muted); font-weight: 600;">
+              Categories
+            </span>
+          </div>
+
+          <div style="position: relative; width: 100%; max-width: 320px;">
+            <input
+              type="text"
+              id="skills-search-input"
+              class="form-input"
+              placeholder="Search skills (e.g. Python, SQL)..."
+              style="padding-left: 2.25rem; font-size: 0.84rem; font-family: var(--font-mono);"
+            />
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--color-text-muted); pointer-events: none;">
+              <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Skills Grid Container -->
+        <div id="skills-catalog-grid" class="grid-3">
+          <!-- Dynamically populated via script -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 data-bind="name">Sanha Selasak</h4>
+          <p>
+            Management Information Systems student at Phnom Penh International University (PPIU). Aspiring Software Engineer & IT Specialist.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="./" class="footer-link">Home</a></li>
+            <li><a href="./about.html" class="footer-link">About</a></li>
+            <li><a href="./skills.html" class="footer-link">Skills</a></li>
+            <li><a href="./projects.html" class="footer-link">Projects</a></li>
+            <li><a href="./experience.html" class="footer-link">Experience</a></li>
+            <li><a href="./contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <ul class="footer-links">
+            <li><a href="mailto:sanhaselasak2007@gmail.com" class="footer-link" data-bind="email">Email</a></li>
+            <li><a href="https://github.com/sanhaselasak" target="_blank" rel="noopener noreferrer" class="footer-link" data-bind="github_url">GitHub</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link" data-bind="linkedin_url">LinkedIn</a></li>
+            <li><a href="tel:+85570494706" class="footer-link" data-bind="phone">+855 70 494 706</a></li>
+          </ul>
+        </div>
+
+                <div class="footer-col">
+          <h5>Availability</h5>
+          <p style="font-size: 0.8rem; color: var(--color-ondark-text-muted); margin-bottom: 0.75rem;" data-bind="availability_status">
+            Available for internships, developer roles &amp; academic collaboration.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span class="current-year">2026</span> <span data-bind="name">Sanha Selasak</span>. All rights reserved.
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.72rem;">
+          Built with HTML, CSS & JavaScript
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="./js/api.js"></script>
+  <script type="module" src="./js/navigation.js"></script>
+  <script type="module" src="./js/animations.js"></script>
+  <script type="module" src="./js/main.js"></script>
+  <script type="module">
+    import { API } from './js/api.js';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const container = document.getElementById('skills-catalog-grid');
+      const searchInput = document.getElementById('skills-search-input');
+      const countLabel = document.getElementById('skills-count-label');
+      let skillCategories = [];
+
+      async function loadSkills() {
+        if (!container) return;
+        try {
+          container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem;"><span class="spinner" style="border-color: var(--color-primary); border-top-color: transparent;"></span></div>`;
+          const res = await (window.API ? window.API.getSkills() : API.getSkills());
+          skillCategories = Array.isArray(res) ? res : (res && Array.isArray(res.data) ? res.data : []);
+          renderSkills('');
+        } catch (e) {
+          container.innerHTML = `<div class="card" style="grid-column: 1/-1; text-align: center;"><p>Error loading skills.</p></div>`;
+        }
+      }
+
+      function renderSkills(query) {
+        if (!container) return;
+        if (!Array.isArray(skillCategories)) skillCategories = [];
+        const q = (query || '').toLowerCase().trim();
+
+        const filtered = skillCategories.filter((cat) => {
+          if (!cat) return false;
+          if (!q) return true;
+          const categoryName = (cat.category || '').toLowerCase();
+          const items = Array.isArray(cat.items) ? cat.items : [];
+          return categoryName.includes(q) || items.some(item => typeof item === 'string' && item.toLowerCase().includes(q));
+        });
+
+        if (countLabel) {
+          countLabel.textContent = `Categories (${filtered.length})`;
+        }
+
+        if (filtered.length === 0) {
+          container.innerHTML = `
+            <div class="card" style="grid-column: 1/-1; text-align: center; padding: 3rem 1rem;">
+              <p style="margin-bottom: 1rem;">No skills found matching "${query}".</p>
+              <button class="btn btn-sm btn-line clear-skills-search-btn" type="button">Clear Search</button>
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = filtered.map((cat) => `
+          <div class="card hover-lift" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span class="tag tag-gold">${cat.category}</span>
+                <div style="padding: 0.35rem; border-radius: var(--radius-sm); background: var(--color-primary-soft); color: var(--color-primary);">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+              </div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">${cat.category}</h3>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                ${(cat.items || []).map(item => `
+                  <span class="tag" style="background: var(--color-surface-sunken);">
+                    <span style="color: var(--color-gold-solid); font-weight: bold;">✓</span>
+                    <span>${item}</span>
+                  </span>
+                `).join('')}
+              </div>
+            </div>
+
+            <div style="border-top: 1px solid var(--color-border-soft); padding-top: 1rem; margin-top: 1.5rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted);">
+              <span>${cat.items ? cat.items.length : 0} competencies</span>
+              <span style="color: var(--color-gold);">Active focus</span>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => renderSkills(e.target.value));
+      }
+
+      container?.addEventListener('click', (e) => {
+        if (!e.target.closest('.clear-skills-search-btn') || !searchInput) return;
+        searchInput.value = '';
+        renderSkills('');
+        searchInput.focus();
+      });
+
+      loadSkills();
+    });
+  </script>
+</body>
+</html>

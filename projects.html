@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Case Studies — Sanha Selasak</title>
+  <meta name="description"
+    content="Explore software systems, MIS coursework projects, and web applications developed by Sanha Selasak with complete technical case studies." />
+
+  <!-- Google Fonts -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="256x256" href="./assets/favicon-256.png" />
+  <link rel="apple-touch-icon" href="./assets/favicon-256.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+
+  <script type="module" src="./js/theme.js"></script>
+</head>
+
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="./" class="brand-link">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" style="color: var(--color-primary);">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name" data-bind="name">Sanha Selasak</span>
+          <span class="brand-title">MIS • Software Engineering</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="./" class="nav-link">Home</a></li>
+          <li><a href="./about.html" class="nav-link">About</a></li>
+          <li><a href="./skills.html" class="nav-link">Skills</a></li>
+          <li><a href="./projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="./experience.html" class="nav-link">Experience</a></li>
+          <li><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle light or dark theme" title="Toggle Theme">
+          <span class="theme-toggle-icon"></span>
+        </button>
+        <a href="./contact.html" class="btn btn-solid btn-sm">Get in Touch</a>
+        <button class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <a href="./" class="mobile-nav-link">Home</a>
+    <a href="./about.html" class="mobile-nav-link">About</a>
+    <a href="./skills.html" class="mobile-nav-link">Skills</a>
+    <a href="./projects.html" class="mobile-nav-link active">Projects</a>
+    <a href="./experience.html" class="mobile-nav-link">Experience</a>
+    <a href="./contact.html" class="mobile-nav-link">Contact</a>
+    <div style="margin-top: 1rem;">
+      <a href="./contact.html" class="btn btn-solid" style="width: 100%;">Get in Touch</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Banner -->
+    <div class="page-banner bg-atmosphere">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="./">Home</a> / Projects
+        </div>
+        <h1>Projects & Case Studies</h1>
+        <p>
+          Real software systems, MIS coursework solutions, and web applications — with technical case studies detailing
+          architecture, decisions, and outcomes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Controls Bar & Projects Grid -->
+    <section class="section">
+      <div class="container">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border-soft);">
+          <!-- Filter Tabs -->
+          <div style="display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.25rem;">
+            <button class="btn btn-sm btn-solid project-filter-btn" data-filter="all">All Projects</button>
+            <button class="btn btn-sm btn-line project-filter-btn" data-filter="University">University / MIS</button>
+            <button class="btn btn-sm btn-line project-filter-btn" data-filter="Personal">Personal Engineering</button>
+            <button class="btn btn-sm btn-line project-filter-btn" data-filter="Team">Team Collaboration</button>
+          </div>
+
+          <!-- Search Bar -->
+          <div style="position: relative; width: 100%; max-width: 300px;">
+            <input type="text" id="projects-search" class="form-input" placeholder="Search projects or tech..."
+              style="padding-left: 2.25rem; font-size: 0.84rem; font-family: var(--font-mono);" />
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+              style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--color-text-muted); pointer-events: none;">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="projects-grid" class="grid-2">
+          <!-- Injected dynamically by projects.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Case Study Reader Modal -->
+  <div id="case-study-modal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="tag tag-gold" style="font-size: 0.72rem;">Case Study Overview</span>
+        <button id="close-modal-btn" class="modal-close-btn" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div id="modal-case-study-content"></div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 data-bind="name">Sanha Selasak</h4>
+          <p>
+            Management Information Systems student at Phnom Penh International University (PPIU). Aspiring Software
+            Engineer & IT Specialist.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="./" class="footer-link">Home</a></li>
+            <li><a href="./about.html" class="footer-link">About</a></li>
+            <li><a href="./skills.html" class="footer-link">Skills</a></li>
+            <li><a href="./projects.html" class="footer-link">Projects</a></li>
+            <li><a href="./experience.html" class="footer-link">Experience</a></li>
+            <li><a href="./contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <ul class="footer-links">
+            <li><a href="mailto:sanhaselasak2007@gmail.com" class="footer-link" data-bind="email">Email</a></li>
+            <li><a href="https://github.com/sanhaselasak" target="_blank" rel="noopener noreferrer" class="footer-link"
+                data-bind="github_url">GitHub</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link"
+                data-bind="linkedin_url">LinkedIn</a></li>
+            <li><a href="tel:+85570494706" class="footer-link" data-bind="phone">+855 70 494 706</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Availability</h5>
+          <p style="font-size: 0.8rem; color: var(--color-ondark-text-muted); margin-bottom: 0.75rem;" data-bind="availability_status">
+            Available for internships, developer roles &amp; academic collaboration.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span class="current-year">2026</span> <span data-bind="name">Sanha Selasak</span>. All rights reserved.
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.72rem;">
+          Built with HTML, CSS & JavaScript
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="./js/api.js"></script>
+  <script type="module" src="./js/navigation.js"></script>
+  <script type="module" src="./js/animations.js"></script>
+  <script type="module" src="./js/projects.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
